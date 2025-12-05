@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flashcards do Amor</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #ffe8f0;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  color: #d12c6a;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  font-size: 18px;
+}
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #d12c6a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+</style>
+</head>
+<body>
+<h1>💖 Pergunta Aleatória 💖</h1>
+
+<div class="card" id="card">Clique no botão para sortear</div>
+
+<button onclick="sortear()">Sortear Pergunta</button>
+
+<script>
+const perguntas = [
+"Qual é o nosso maior ponto forte como casal?",
+"O que você gostaria de começar a fazer mais e por quê?",
+"Qual é a nossa memória que mais te faz sorrir?",
+"Como é a maneira que você gostaria que eu te apoiasse nos momentos difíceis?",
+"O que sempre quis fazer em casal que ainda não fizemos?",
+"Qual foi a última vez que você se sentiu verdadeiramente vivo? E o que te fez se sentir assim?",
+"Quais são as principais coisas que eu faço pra você que te fazem se sentir amado e valorizado?",
+"Qual foi o momento em que você se sentiu mais próximo de mim?",
+"Existe alguma coisa que você gostaria que eu soubesse sobre você e que você nunca me contou?",
+"De todas as coisas que você faz na vida, pelo que você gostaria de ser lembrado?",
+"O que você acha que podemos fazer para tornar o nosso relacionamento ainda melhor?",
+"Você tem alguma insegurança em relação ao nosso futuro?",
+"Como você descreveria que foi a nossa primeira vez?",
+"Existe algo que eu faço que é irresistível pra você?",
+"Se pudesse reviver um dia que passamos juntos, qual escolheria?",
+"Qual foi o momento exato que percebeu que estava apaixonado(a) por mim?",
+"O que eu faço que te faz sentir seguro(a) em relação a nós?",
+"O que inicialmente te atraiu em mim?",
+"Como podemos melhorar a nossa comunicação para fortalecer ainda mais o nosso relacionamento?",
+"Qual parte do nosso relacionamento você acha que precisa de mais atenção?",
+"O que você aprendeu com seus pais sobre amor? Existe algo que não queira repetir no nosso relacionamento?",
+"Qual a maior loucura de amor que faria?",
+"Perdoaria uma traição?",
+"Como vê o nosso relacionamento daqui 5 anos?",
+"Quantos dias já ficou sem tomar banho?",
+"O que temos do início do namoro que não quer perder com o passar do tempo?",
+"Como você descreveria nossa relação para outras pessoas?",
+"Mudaria algo em mim?",
+"Qual é o maior medo que você tem e que gostaria de superar?",
+"Se trocássemos de corpo por um dia qual a primeira coisa que faria?"
+];
+
+function sortear() {
+  const card = document.getElementById("card");
+  const pergunta = perguntas[Math.floor(Math.random() * perguntas.length)];
+  card.textContent = pergunta;
+}
+</script>
+
+</body>
+</html>
